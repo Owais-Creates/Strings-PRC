@@ -69,37 +69,86 @@
 
 // Q-4 Write a function that takes a sentence (string) as input and returns the same sentence with the first letter of each word capitalized. For example, if the input is "hello world", the output should be "Hello World".
 
-let ques4String = prompt("Enter the string here");
+// let ques4String = prompt("Enter the string here");
 
-const upperCase = (str) => {
-    let finalResult = ""
+// const upperCase = (str) => {
+//     let finalResult = ""
 
-    finalResult += str[0].toUpperCase();
+//     finalResult += str[0].toUpperCase();
 
-    for (i = 1; i < str.length; i++) {
+//     for (i = 1; i < str.length; i++) {
 
-        if (str[i] == " ") {
+//         if (str[i] == " ") {
 
-            if (i + 1 < str.length) {
+//             if (i + 1 < str.length) {
 
-                finalResult += ' ' + str[i + 1].toUpperCase();
-                i++;
-            }
-        }
+//                 finalResult += ' ' + str[i + 1].toUpperCase();
+//                 i++;
+//             }
+//         }
 
-        else {
-            finalResult += str[i]
-        }
+//         else {
+//             finalResult += str[i]
+//         }
+
+//     }
+
+
+//     return finalResult
+
+
+// }
+
+// console.log(upperCase(ques4String));
+
+//---------------------------------------------------------------------------------------------------
+
+let ques5String = prompt("Enter the first string");
+let ques5StringInput = ques5String.toLowerCase();
+
+let ques5StringTwo = prompt("Enter the second string");
+let ques5StringTwoInput = ques5StringTwo.toLowerCase();
+
+const isAnagram = (str1, str2) => {
+
+    // Here we will store the occurence of the characters of str1 and then compare it with str2 (ofc the values).
+    let occuranceObj = {}
+
+    // Length check
+    if (str1.length != str2.length) {
+
+        return "length is not same, Please enter the strings with the same length";
 
     }
 
+    // MAP created for the first string.
+    // value of the key was coming undefined hence the OR operator logic.
+    for (i = 0; i < str1.length; i++) {
+        occuranceObj[str1[i]] = (occuranceObj[str1[i]] || 0) + 1
 
-    return finalResult
+    }
+
+    // If the charac of str2 is same as str1 then we decrement the value by 1 , and if the value of all characters is 0 after the loop then it is a anagram.
+
+    for (j = 0; j < str2.length; j++) {
+
+        if (!occuranceObj[str2[j]]) {
+            return false
+        }
+
+        occuranceObj[str2[j]] -= 1;
+
+    }
+
+    return true;
 
 
 }
 
-console.log(upperCase(ques4String));
+console.log(isAnagram(ques5StringInput, ques5StringTwoInput));
 
 //---------------------------------------------------------------------------------------------------
+
+
+
 
