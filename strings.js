@@ -1,18 +1,18 @@
 // Q1 - Write a function that takes a string as input and returns the string reversed. For example, if the input is "hello", the output should be "olleh".
 
-// let ques1String = prompt("Enter the String");
+let ques1String = prompt("Enter the String");
 
-// const reversedString = (str) => {
-//   let reversed = "";
-//   for ( i = ques1String.length-1 ; i<=0 ; i++ ){
+const reversedString = (str) => {
+  let reversed = "";
+  for ( i = str.length-1 ; i>=0 ; i-- ){
 
-//     reversed += ques1String[i]
+    reversed += str[i]
 
-//   }
-//   return reversed
-// }
+  }
+  return reversed
+}
 
-// console.log(reversedString)
+console.log(reversedString(ques1String))
 
 // ---------------------------------------------------------------------------------------------------
 
