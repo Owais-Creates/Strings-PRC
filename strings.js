@@ -180,3 +180,28 @@ console.log(removeOccuringCharacter(ques6StringInput));
 
 //---------------------------------------------------------------------------------------------------
 
+// Q7 - Write a function that takes a sentence (string) as input and returns the longest word in the sentence. For example, if the input is "The quick brown fox jumped over the lazy dog", the output should be "jumped".
+
+let ques7String = prompt("Enter the string here");
+let ques7SplitString = ques7String.split(" ");
+
+const longestWord = (str) => {
+
+    let result = str[0]
+
+    for (i = 1; i < str.length; i++) {
+
+        if (str[i].length > result.length) {
+            result = str[i]
+        }
+
+    }
+
+
+    return result;
+
+}
+
+console.log(longestWord(ques7SplitString));
+
+//---------------------------------------------------------------------------------------------------
