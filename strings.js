@@ -1,18 +1,18 @@
 // Q1 - Write a function that takes a string as input and returns the string reversed. For example, if the input is "hello", the output should be "olleh".
 
-let ques1String = prompt("Enter the String");
+// let ques1String = prompt("Enter the String");
 
-const reversedString = (str) => {
-  let reversed = "";
-  for ( i = str.length-1 ; i>=0 ; i-- ){
+// const reversedString = (str) => {
+//   let reversed = "";
+//   for ( i = str.length-1 ; i>=0 ; i-- ){
 
-    reversed += str[i]
+//     reversed += str[i]
 
-  }
-  return reversed
-}
+//   }
+//   return reversed
+// }
 
-console.log(reversedString(ques1String))
+// console.log(reversedString(ques1String))
 
 // ---------------------------------------------------------------------------------------------------
 
@@ -105,103 +105,131 @@ console.log(reversedString(ques1String))
 
 // Q5 - Write a function that takes two strings as input and returns true if they are anagrams of each other (contain the same characters in a different order), and false otherwise. For example, "listen" and "silent" are anagrams.
 
-let ques5String = prompt("Enter the first string");
-let ques5StringInput = ques5String.toLowerCase();
+// let ques5String = prompt("Enter the first string");
+// let ques5StringInput = ques5String.toLowerCase();
 
-let ques5StringTwo = prompt("Enter the second string");
-let ques5StringTwoInput = ques5StringTwo.toLowerCase();
+// let ques5StringTwo = prompt("Enter the second string");
+// let ques5StringTwoInput = ques5StringTwo.toLowerCase();
 
-const isAnagram = (str1, str2) => {
+// const isAnagram = (str1, str2) => {
 
-    // Here we will store the occurence of the characters of str1 and then compare it with str2 (ofc the values).
-    let occuranceObj = {}
+//     // Here we will store the occurence of the characters of str1 and then compare it with str2 (ofc the values).
+//     let occuranceObj = {}
 
-    // Length check
-    if (str1.length != str2.length) {
+//     // Length check
+//     if (str1.length != str2.length) {
 
-        return "length is not same, Please enter the strings with the same length";
+//         return "length is not same, Please enter the strings with the same length";
 
-    }
+//     }
 
-    // MAP created for the first string.
-    // value of the key was coming undefined hence the OR operator logic.
-    for (i = 0; i < str1.length; i++) {
-        occuranceObj[str1[i]] = (occuranceObj[str1[i]] || 0) + 1
+//     // MAP created for the first string.
+//     // value of the key was coming undefined hence the OR operator logic.
+//     for (i = 0; i < str1.length; i++) {
+//         occuranceObj[str1[i]] = (occuranceObj[str1[i]] || 0) + 1
 
-    }
+//     }
 
-    // If the charac of str2 is same as str1 then we decrement the value by 1 , and if the value of all characters is 0 after the loop then it is a anagram.
+//     // If the charac of str2 is same as str1 then we decrement the value by 1 , and if the value of all characters is 0 after the loop then it is a anagram.
 
-    for (j = 0; j < str2.length; j++) {
+//     for (j = 0; j < str2.length; j++) {
 
-        if (!occuranceObj[str2[j]]) {
-            return false
-        }
+//         if (!occuranceObj[str2[j]]) {
+//             return false
+//         }
 
-        occuranceObj[str2[j]] -= 1;
+//         occuranceObj[str2[j]] -= 1;
 
-    }
+//     }
 
-    return true;
+//     return true;
 
 
-}
+// }
 
-console.log(isAnagram(ques5StringInput, ques5StringTwoInput));
+// console.log(isAnagram(ques5StringInput, ques5StringTwoInput));
 
 //---------------------------------------------------------------------------------------------------
 
 // Q6 - Write a function that takes a string as input and returns the string with duplicate characters removed. For example, if the input is "hello", the output should be "helo".
 
-let ques6String = prompt("Enter the string");
-let ques6StringInput = ques6String.toLowerCase();
+// let ques6String = prompt("Enter the string");
+// let ques6StringInput = ques6String.toLowerCase();
 
-const removeOccuringCharacter = (str) => {
-    let obj = {}
-    let result = "";
+// const removeOccuringCharacter = (str) => {
+//     let obj = {}
+//     let result = "";
 
-    for (i = 0; i < str.length; i++) {
-        obj[str[i]] = (obj[str[i]] || 0) + 1;
-    }
+//     for (i = 0; i < str.length; i++) {
+//         obj[str[i]] = (obj[str[i]] || 0) + 1;
+//     }
 
-    for (let j = 0; j < str.length; j++) {
-        if (obj[str[j]] > 1) {
-            obj[str[j]] -= 1;
-        } else {
-            result += str[j];
-        }
-    }
+//     for (let j = 0; j < str.length; j++) {
+//         if (obj[str[j]] > 1) {
+//             obj[str[j]] -= 1;
+//         } else {
+//             result += str[j];
+//         }
+//     }
 
-    return result
+//     return result
 
-}
+// }
 
-console.log(removeOccuringCharacter(ques6StringInput));
+// console.log(removeOccuringCharacter(ques6StringInput));
 
 //---------------------------------------------------------------------------------------------------
 
 // Q7 - Write a function that takes a sentence (string) as input and returns the longest word in the sentence. For example, if the input is "The quick brown fox jumped over the lazy dog", the output should be "jumped".
 
-let ques7String = prompt("Enter the string here");
-let ques7SplitString = ques7String.split(" ");
+// let ques7String = prompt("Enter the string here");
+// let ques7SplitString = ques7String.split(" ");
 
-const longestWord = (str) => {
+// const longestWord = (str) => {
 
-    let result = str[0]
+//     let result = str[0]
 
-    for (i = 1; i < str.length; i++) {
+//     for (i = 1; i < str.length; i++) {
 
-        if (str[i].length > result.length) {
-            result = str[i]
-        }
+//         if (str[i].length > result.length) {
+//             result = str[i]
+//         }
 
-    }
+//     }
 
 
-    return result;
+//     return result;
 
-}
+// }
 
-console.log(longestWord(ques7SplitString));
+// console.log(longestWord(ques7SplitString));
 
 //---------------------------------------------------------------------------------------------------
+ 
+// HW zWrite a function which  will take two strings as input and returns boolean value indicating whether one string is an permutation of other.
+
+// Q8 - Write a function that takes a sentence (string) as input and returns the same sentence with each word capitalized, except for certain words (e.g., "and", "the", "of"), which should remain lowercase. For example, if the input is "the quick brown fox", the output should be "The Quick Brown Fox".
+
+// let ques8string = prompt("Enter the string");
+// let ques8stringInput = ques8string.toLowerCase();
+// let ques8split = ques8stringInput.split(" ");
+
+// const titleCase = (str) => {
+//     let result = "";
+
+//     for (i = 0; i < str.length; i++) {
+//         let word = str[i];
+//         if (word !== "the" && word !== "and" && word !== "or" && word !== "is") {
+//             result += " " +  word.charAt(0).toUpperCase() + word.slice(1)
+//         } else {
+//             result += " " + word
+//         }
+//     }
+
+//     result=result.trim()
+//     return result
+
+// }
+
+// console.log(titleCase(ques8split));
+
