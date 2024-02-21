@@ -105,10 +105,10 @@
 
 // Q5 - Write a function that takes two strings as input and returns true if they are anagrams of each other (contain the same characters in a different order), and false otherwise. For example, "listen" and "silent" are anagrams.
 
-// let ques5String = prompt("Enter the first string");
+// let ques5String = prompt("Enter the first string").trim();
 // let ques5StringInput = ques5String.toLowerCase();
 
-// let ques5StringTwo = prompt("Enter the second string");
+// let ques5StringTwo = prompt("Enter the second string").trim();
 // let ques5StringTwoInput = ques5StringTwo.toLowerCase();
 
 // const isAnagram = (str1, str2) => {
