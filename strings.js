@@ -153,7 +153,7 @@
 
 // Q6 - Write a function that takes a string as input and returns the string with duplicate characters removed. For example, if the input is "hello", the output should be "helo".
 
-// let ques6String = prompt("Enter the string");
+    // let ques6String = prompt("Enter the string");
 // let ques6StringInput = ques6String.toLowerCase();
 
 // const removeOccuringCharacter = (str) => {
@@ -232,4 +232,22 @@
 // }
 
 // console.log(titleCase(ques8split));
+
+// -------------------------------------------------------------------------------------------------------------------------
+
+// Q9 - write a function which takes two arguements "string" and "character" and returns the "char" and its occurances. 
+
+const occuringCharacterCount = (str, char) => {
+    let count = 0
+    for ( i = 0 ;i<str.length; i++ ){
+        if(str[i]==char){
+            count++
+        }
+    }
+    console.log(`the character is ${char} and the count is ${count}`);
+}
+
+occuringCharacterCount("girafe is a girafe giagantic animal","g") // OUTPUT - the character is g and the count is 4.
+
+//-------------------------------------------------------------------------------------------------------------------------
 
